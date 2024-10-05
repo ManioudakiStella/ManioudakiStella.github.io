@@ -136,6 +136,69 @@
             max-width: 550px;
             height: auto;
         }
+
+        /* Media query for devices with max width of 768px (tablets and smartphones) */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .go-back-button {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 5px 0;
+            }
+
+            .language-buttons, .social-buttons {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .language-buttons a, .social-buttons a {
+                margin: 5px 0;
+                padding: 8px;
+            }
+
+            .content h1 {
+                font-size: 36px;
+            }
+        }
+
+        /* Media query for smaller smartphones with max width of 480px */
+        @media (max-width: 480px) {
+            .nav-links a {
+                font-size: 16px;
+            }
+
+            .go-back-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+
+            .content h1 {
+                font-size: 30px;
+            }
+
+            .img-medusa {
+                width: 100%;
+                max-width: 350px;
+            }
+        }        
     </style>
 </head>
 <body>
