@@ -31,28 +31,6 @@
       align-items: center;
     }
 
-    .go-back-button {
-      background: #13252E;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 18px;
-      transition: background 0.3s, transform 0.3s;
-      margin-right: -125px;
-    }
-
-    .go-back-button:hover {
-      background: #555;
-      transform: scale(1.05);
-    }
-
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
-      margin-left: 164px;
-    }
-
     .nav-links {
       list-style: none;
       display: flex;
@@ -177,21 +155,33 @@
     .exhibition-item:hover {
       transform: scale(1.05);
     }
+
+    .logo-button {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            background: #13252E;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+      }
+
+      .logo-button:hover {
+          background: #555;
+          transform: scale(1.05);
+      }
   </style>
 </head>
 <body>
 <nav>
-  <div class="nav-content">
-    <a href="javascript:history.back()" class="go-back-button">Επιστροφή</a>
-    <div class="logo">Στέλλα Μανιουδάκη</div>
-  </div>
+  <a href="../GreekPages/mainMenuGR.html" class="logo-button">Στέλλα Μανιουδάκη</a>
   <ul class="nav-links">
-    <li><a href="../GreekPages/mainMenuGR.html">Κεντρική Οθόνη</a></li>
-    <li><a href="../GreekPages/projectsGR.html">Εργασίες</a></li>
-    <li><a href="../GreekPages/exhibitionsGR.html">Εκθέσεις</a></li>
-    <li><a href="../GreekPages/newsGR.html">Νέα</a></li>
-    <li><a href="../GreekPages/aboutMeGR.html">Σχετικά</a></li>
-</ul>
+      <li><a href="../GreekPages/projectsGR.html">Εργασίες</a></li>
+      <li><a href="../GreekPages/exhibitionsGR.html">Εκθέσεις</a></li>
+      <li><a href="../GreekPages/newsGR.html">Νέα</a></li>
+      <li><a href="../GreekPages/aboutMeGR.html">Σχετικά</a></li>
+  </ul>
   <div class="language-buttons">
     <a href="../EnglishPages/exhibitions.html" title="English"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"></a>
     <a href="../GreekPages/exhibitionsGR.html" title="Greek"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="Greek"></a>
