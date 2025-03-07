@@ -24,12 +24,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            position: relative;
-        }
-
-        .nav-content {
-            display: flex;
-            align-items: center;
+            flex-wrap: wrap;
         }
 
         .nav-links {
@@ -37,12 +32,10 @@
             display: flex;
             margin: 0;
             padding: 0;
-            flex: 1;
-            justify-content: center; /* Center the links horizontally */
         }
 
         .nav-links li {
-            margin: 0 15px; /* Adjust spacing between links */
+            margin: 0 15px;
         }
 
         .nav-links a {
@@ -59,48 +52,9 @@
             border-radius: 5px;
         }
 
-        .social-buttons, .language-buttons {
-            display: flex;
-            align-items: center; /* Align items vertically */
-        }
-
-        .social-buttons a, .language-buttons a {
-            color: #fff;
-            background: #13252E;
-            padding: 10px 15px;
-            margin: 0 5px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
-
-        .social-buttons a:hover, .language-buttons a:hover {
-            background: #555;
-        }
-
-        .language-buttons a img {
-            width: 24px;
-            height: 16px;
-        }
-
-        .language-buttons {
-            margin-right: 10px; /* Space between language and social buttons */
-        }
-
         .content {
             text-align: center;
-            margin-top: 20px;
             padding: 20px;
-        }
-
-        .content h1 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 24px;
         }
 
         .news-wrapper {
@@ -115,49 +69,56 @@
             border-radius: 10px;
             padding: 20px;
             margin: 10px 0;
-            width: 100%;
+            width: 90%;
             max-width: 800px;
             text-align: left;
         }
 
-        .news-article h2 {
-            margin-top: 0;
-            font-size: 32px;
-        }
-
-        .news-article p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .news-article time {
+        .news-article img {
             display: block;
-            font-size: 14px;
-            color: #bbb;
-            margin-bottom: 10px;
+            margin: 10px auto;
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
         }
-        .logo-button {
-            font-size: 26px;
-            font-weight: bold;
-            color: #fff;
-            text-decoration: none;
-            background: #13252E;
+
+        .watch-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .watch-button a {
+            background: #fff;
+            color: #13252E;
             padding: 10px 20px;
-            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
             transition: background 0.3s, transform 0.3s;
         }
 
-        .logo-button:hover {
-            background: #555;
+        .watch-button a:hover {
+            background: #ddd;
             transform: scale(1.05);
         }
-        .news-article img {
-            display: block; /* Makes the image behave as a block element */
-            margin: 10px auto; /* Centers the image horizontally */
-            height: 400px; /* Fixed height */
-            width: auto; /* Maintains aspect ratio */
-            border-radius: 10px; /* Optional: Add rounded corners */
-            object-fit: cover; /* Ensures proper cropping without distortion */
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -170,15 +131,6 @@
         <li><a href="../EnglishPages/news.html">News</a></li>
         <li><a href="../EnglishPages/aboutMe.html">About</a></li>
     </ul>
-    <div class="language-buttons">
-        <a href="../EnglishPages/news.html" title="English"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"></a>
-        <a href="../GreekPages/newsGR.html" title="Greek"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="Greek"></a>
-    </div>
-    <div class="social-buttons">
-        <a href="https://www.facebook.com/stella.manioudaki.16" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/stella_manioudaki" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:stelmanphoto@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-    </div>
 </nav>
 <div class="content">
     <h1>News</h1>
@@ -192,33 +144,26 @@
             <time datetime="2024-04-24">April 24, 2024</time>
             <h2>The movie "Ενθύμηση" has been uploaded in Youtube</h2>
             <p>You can now watch in Youtube the movie "Ενθύμηση" directed by Sofia Kasssari and produced by Citron stories, at Chania Film Festival, inspired by my photographic travelogue in the Metohia of Chania...</p>
-            <div style="text-align: center; margin-top: 15px;">
-                <a href="https://youtu.be/oIEUE-PxCZM?si=dHtSMyMVIVsNHNur" target="_blank" 
-                   style="display: inline-block; background: #fff; color: #13252E; padding: 10px 20px; 
-                      font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 8px; 
-                      transition: background 0.3s, transform 0.3s;">
-                    🎥 Watch here
-                </a>
+            <div class="watch-button">
+                <a href="https://youtu.be/oIEUE-PxCZM?si=dHtSMyMVIVsNHNur" target="_blank">🎥 Watch here</a>
             </div>
         </article>
         <article class="news-article">
-            <time datetime="2024-01">January, 2024</time>
-            <h2>Publiced at the Magazine "Φωτογράφος" issue 288 January 2024.</h2>
-            <img class="img-magazine" src="../img/magazine photo.jpg" alt="magazine">
+            <time datetime="2024-08-24">August 24, 2024</time>
+            <h2>Publish of my Website</h2>
+            <p>I am announcing my new website which is published today, August 24, 2024.</p>
         </article>
         <article class="news-article">
-            <time datetime="2024-09-19">October 19 2023</time>
+            <time datetime="2024-01">January, 2024</time>
+            <h2>Published in the Magazine "Φωτογράφος" issue 288 January 2024.</h2>
+            <img src="../img/magazine photo.jpg" alt="magazine">
+        </article>
+        <article class="news-article">
+            <time datetime="2023-10-19">October 19, 2023</time>
             <h2>Screening of the movie "Ενθύμηση" at Chania Film Festival.</h2>
             <p>Screening of the movie "Ενθύμηση" directed by Sofia Kasssari and produced by Citron stories, at Chania Film Festival, inspired by my photographic travelogue in the Metohia of Chania...</p>
-            <img class="img-enthMag" src="../img/enthimisiMag.jpg" alt="enthMag">
+            <img src="../img/enthimisiMag.jpg" alt="enthMag">
         </article>
-        <article class="news-article">
-            <time datetime="2024-09-19">August 28 2021</time>
-            <h2>First screening of the movie "Ενθύμηση" inspired by my photographic travelogue in the Metohia of Chania....</h2>
-            <p>The first screening of the movie "Ενθύμηση" directed by Sofia Kasssari and produced by Citron stories, in the outdoor area of the Olive Oil Mill in the Metochi of Agios Eleftherios in Mournies on my photographic journey to the Metochia of Chania, through the program "Open Sails of the Municipality of Chania.</p>
-            <img class="img-enthShow" src="../img/enthShow.jpg" alt="enthShow">
-        </article>
-        <!-- Add more articles here as needed -->
     </div>
 </div>
 </body>
