@@ -159,6 +159,20 @@
             border-radius: 10px; 
             object-fit: cover; 
         }
+        .medusa-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .medusa-images img {
+            height: 400px;
+            width: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 <body>
@@ -187,8 +201,10 @@
             <time datetime="2025-05-04">May 4 2025</time>
             <h2>"Medusa" travels to Volos.</h2>
             <p>My photograph "Medusa" in the 2nd Art Exhibition of employees of the Hellenic Ministry of Maritime Affairs & Insular Policy with theme "The Sea".</p>
-            <img class="img-Medusa_in_Volos" src="../img/Medusa_in_Volos.jpg" alt="Medusa_in_Volos">
-            <img class="img-Volos_poster" src="../img/Volos_poster.jpg" alt="Volos_poster">
+            <div class="medusa-images">
+                <img class="img-Medusa_in_Volos" src="../img/Medusa_in_Volos.jpg" alt="Medusa_in_Volos">
+                <img class="img-Volos_poster" src="../img/Volos_poster.jpg" alt="Volos_poster">
+            </div>            
         </article>
         <article class="news-article">
             <time datetime="2024-08-24">August 24, 2024</time>
